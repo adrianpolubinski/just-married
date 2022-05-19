@@ -1,0 +1,7 @@
+.c-info-list {
+    @include list-reset;
+}
+
+.c-info-list__item:not(:last-child){
+    margin-bottom: 10px;
+}

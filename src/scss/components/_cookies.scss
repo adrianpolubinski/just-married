@@ -1,0 +1,20 @@
+.c-cookies {
+    background-color: color(gray-2);
+    padding: 2rem;
+    color: color(white-1);
+    border-radius: 2rem;
+    border: 2px solid color(white-1);
+}
+.c-cookies__link{
+    color:color(white-1);
+    text-decoration: underline
+}
+.c-cookies__button{
+    @include button-reset;
+    border: 2px solid color(white-1);
+    font-size: font-size(size-16);
+    padding: 0.5rem;
+    margin-top: 2rem;
+    
+    background-color: color(white-1);
+}

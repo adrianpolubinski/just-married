@@ -1,0 +1,46 @@
+.c-main-nav {
+    @include list-reset;
+    display: flex;
+    flex-direction: column;
+    background-color: color(bg-theme-dark);
+    @include break-point(desktop-small) {
+        flex-direction: row;
+    }
+}
+
+.c-main-nav__item {
+    margin: 0px 20px;
+    text-align: center;
+}
+
+
+.c-main-nav__link{
+    font-size: font-size(size-22);
+    text-decoration: none;
+    color: color(white-1);
+    position: relative;
+
+    @include break-point(desktop-small) {
+        &::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0px;
+            background-color: color(orange-1);
+            transition: width 0.5s;
+        }
+    }
+}
+
+.c-main-nav__link:hover{
+    cursor: pointer;
+
+    &::after{
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        transition: width .5s ;
+    }
+}

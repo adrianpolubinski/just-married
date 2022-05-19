@@ -1,0 +1,14 @@
+.c-contact{
+    
+}
+.c-contact__title{
+text-align: center;
+margin-bottom: 40px;
+}
+
+.c-contact__content{
+    @include flex-center();
+    justify-content: space-around;
+    flex-direction: row-reverse;
+   
+}

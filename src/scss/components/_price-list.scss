@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+.c-price-list {
+    background-color: color(gray-4);
+}
+
+.c-price-list__title {
+    padding: 10px 0;
+    font-size: font-size(size-44);
+    text-align: center;
+}
+
+.c-price-list__subtitle {
+    font-size: font-size(size-20);
+
+    text-align: center;
+}
+
+.c-price-list__prices-container {
+    @include break-point(tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+
+.c-price-list__price-box {
+    position: relative;
+    border-radius: 10px;
+    
+    margin: 70px 20px 20px 20px;
+    padding: 10px;
+
+    background-color: color(white-1);
+    @include break-point(tablet) {
+        width: 340px;
+    }
+}
+
+.c-price-list__price {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 60%;
+    height: 100px;
+
+    font-family: 'Secular One', sans-serif;
+
+    transform: translateX(-50%);
+    text-align: center;
+
+    color: color(white-1);
+    box-shadow: 0 0 17px -3px rgba(66, 68, 90, 1);
+}
+
+
+.c-price-list__plan-name {
+    font-size: font-size(size-28);
+}
+
+.c-price-list__plan-price {
+    font-size: font-size(size-22);
+}
+
+
+.c-price-list__price--navy-blue {
+    background: rgb(64,56,194);
+    background: linear-gradient(180deg, rgba(64,56,194,1) 0%, rgba(105,67,255,1) 100%, rgba(87,19,235,1) 100%, rgba(120,19,235,1) 100%);
+}
+
+.c-price-list__price--green {
+    background: rgb(85,131,38);
+    background: linear-gradient(180deg, rgba(85,131,38,1) 0%, rgba(33,181,93,1) 100%, rgba(87,19,235,1) 100%, rgba(120,19,235,1) 100%);
+}
+
+.c-price-list__price--orange {
+    background: rgb(255,132,0);
+background: linear-gradient(180deg, rgba(255,132,0,1) 0%, rgba(255,147,23,1) 100%);
+}
+
+.c-price-list__options {
+    @include list-reset();
+    min-width: 305px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include break-point(tablet) {
+        display: block;
+    }
+    margin: 60px 0 20px 0;
+  
+    
+}
+.c-price-list__option {
+    margin: 5px 0;
+
+    color: black;
+}
+
+.c-price-list__button {
+    @include button-reset();
+    font-family: 'Secular One', sans-serif;
+    display: block;
+    font-size: font-size(size-20);
+    margin: 10px auto;
+    padding: 15px;
+
+    color: color(white-1);
+    background-color: color(orange-1);
+    transition: 300ms ease-in-out;
+    transition-property: opacity;
+    &:hover {
+        cursor: pointer;
+        opacity: .8;
+    }
+}
+

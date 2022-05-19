@@ -1,0 +1,32 @@
+// bases
+@import 
+    './bases/variables', 
+    './bases/functions',
+    './bases/mixins',
+    './bases/typography',
+    './bases/reset',
+    './bases/spacings',
+    './bases/ui';
+
+// components
+@import 
+    './components/burger',
+    './components/calendar',
+    './components/contact',
+    './components/header', 
+    './components/main-nav',
+    
+    './components/slider',
+    './components/price-list',
+    './components/info-list',
+    './components/info-box',
+    './components/footer',
+    './components/form',
+    
+    './components/cookies';  
+
+// layouts
+@import 
+    './layouts/body',
+    './layouts/inner',
+    './layouts/cookies';

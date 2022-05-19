@@ -1,0 +1,34 @@
+@function get-value-from-map($map, $keys...) {
+    @each $key in $keys {
+        @if (map-has-key($map, $key) == false) {
+            @warn 'Invalid key: \'#{$key}\'.';
+            @return null;
+        }
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+@function color($key) {
+    @return get-value-from-map($colors, $key);
+}
+
+@function font-size($key) {
+    @return get-value-from-map($font-sizes, $key);
+}
+
+@function font-weight($key) {
+    @return get-value-from-map($font-weights, $key);
+}
+
+@function font($key) {
+    @return get-value-from-map($fonts, $key);
+}
+
+@function z-index($key) {
+    @return get-value-from-map($z-indexes, $key);
+}
+
+// @function break-point($key) {
+//     @return get-value-from-map($break-points, $key);
+// }
