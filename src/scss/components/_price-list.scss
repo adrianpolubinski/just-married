@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
 .c-price-list {
-    background-color: color(gray-4);
+    // background-color: ;
 }
 
 .c-price-list__title {
@@ -17,7 +17,7 @@
 }
 
 .c-price-list__prices-container {
-    @include break-point(tablet) {
+    @include media(tablet) {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -33,7 +33,7 @@
     padding: 10px;
 
     background-color: color(white-1);
-    @include break-point(tablet) {
+    @include media(tablet) {
         width: 340px;
     }
 }
@@ -93,7 +93,7 @@ background: linear-gradient(180deg, rgba(255,132,0,1) 0%, rgba(255,147,23,1) 100
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @include break-point(tablet) {
+    @include media(tablet) {
         display: block;
     }
     margin: 60px 0 20px 0;

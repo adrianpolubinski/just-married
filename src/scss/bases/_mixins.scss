@@ -1,15 +1,14 @@
 @mixin button-reset() {
     padding: 0;
-
     border: none;
     outline: none;
     background: none;
 }
 
+
 @mixin list-reset() {
     margin: 0;
     padding: 0;
-
     list-style: none;
 }
 
@@ -43,8 +42,7 @@
     transition-duration: $duration;
 }
 
-
-@mixin break-point( $breakpoint ) {
+@mixin media( $breakpoint ) {
     @if map-has-key( $break-points, $breakpoint ) {
        @media ( min-width: #{ map-get( $break-points, $breakpoint ) } ) {
          @content;

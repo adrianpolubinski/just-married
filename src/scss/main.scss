@@ -15,18 +15,19 @@
     './components/contact',
     './components/header', 
     './components/main-nav',
-    
     './components/slider',
     './components/price-list',
     './components/info-list',
     './components/info-box',
     './components/footer',
     './components/form',
-    
     './components/cookies';  
 
 // layouts
 @import 
     './layouts/body',
+    './layouts/cookies',
+    './layouts/footer',
     './layouts/inner',
-    './layouts/cookies';
+    './layouts/header',
+    './layouts/slider';

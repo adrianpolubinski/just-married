@@ -12,7 +12,7 @@
         cursor: pointer;
     }
 
-    @include break-point(desktop-small){
+    @include media(desktop-small){
         display: none;
     }
 }

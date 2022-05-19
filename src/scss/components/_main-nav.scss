@@ -3,7 +3,8 @@
     display: flex;
     flex-direction: column;
     background-color: color(bg-theme-dark);
-    @include break-point(desktop-small) {
+    height: 100%;
+    @include media(desktop-small) {
         flex-direction: row;
     }
 }
@@ -11,36 +12,57 @@
 .c-main-nav__item {
     margin: 0px 20px;
     text-align: center;
+    height: 100%;
+    @include media(desktop-small) {
+        @include flex-center-vertically();
+    }
 }
 
 
 .c-main-nav__link{
-    font-size: font-size(size-22);
+    font-size: font-size(size-18);
     text-decoration: none;
     color: color(white-1);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    
 
-    @include break-point(desktop-small) {
-        &::after{
+    @include media(desktop-small) {
+        line-height: 2rem;
+
+        &::after {
             content: "";
             position: absolute;
             right: 0;
-            bottom: 0;
-            height: 2px;
+            bottom: -4px;
+            height: 3px;
             width: 0px;
             background-color: color(orange-1);
             transition: width 0.5s;
-        }
+        }   
     }
 }
 
 .c-main-nav__link:hover{
     cursor: pointer;
-
     &::after{
         left: 0;
-        bottom: 0;
+        bottom: -4px;
         width: 100%;
         transition: width .5s ;
     }
+}
+
+.c-main-nav__ico{
+    display: none;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+    @include media(desktop-small) {
+        display: inline;
+    }
+}
+
+.c-main-nav__link:hover .c-main-nav__ico{
+    color: color(orange-1)
 }

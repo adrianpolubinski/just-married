@@ -1,6 +1,14 @@
 .c-slider {
   position: relative;
-  height: calc(100vh - 37px);
+  height: 40vh;
+  
+  @include media(tablet) {
+    height: 60vh;
+  }
+
+  @include media(desktop) {
+    height: calc(100vh - 75px - 10px);
+  }
 }
 
 .c-slider__slide {
@@ -115,6 +123,6 @@
   transition: background 0.5s ease-in-out;
 }
 .c-slider__dot.is-active {
-  background: color(dark-gray);
+  background: color(white-1);
   transition: background 0.5s ease-in-out;
 }
